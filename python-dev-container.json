@@ -1,0 +1,20 @@
+{
+  "name": "Python",
+  "image": "837220376979.dkr.ecr.ap-southeast-2.amazonaws.com/base-dev-container",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.pylint",
+        "njpwerner.autodocstring",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+
+  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt"
+}
