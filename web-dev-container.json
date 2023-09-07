@@ -1,0 +1,10 @@
+{
+    "name": "Web",
+    "image": "837220376979.dkr.ecr.ap-southeast-2.amazonaws.com/base-dev-container",
+
+    "customizations": {
+        "vscode": {
+            "extensions": ["esbenp.prettier-vscode"]
+        }
+    }
+}
