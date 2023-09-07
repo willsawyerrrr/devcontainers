@@ -2,6 +2,12 @@
     "name": "Python",
     "image": "837220376979.dkr.ecr.ap-southeast-2.amazonaws.com/base-dev-container",
 
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.10"
+        }
+    },
+
     "customizations": {
         "vscode": {
             "extensions": [
