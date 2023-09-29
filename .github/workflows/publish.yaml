@@ -29,9 +29,10 @@ jobs:
       - name: Install DevContainer CLI
         run: npm install -g @devcontainers/cli
 
-      - name: Build and push image to Amazon ECR
+      - name: Build and Push Image to Docker Hub
         env:
-          CONTAINER_NAME: ${{ matrix.type }}-dev-container
+          container-name: ${{ matrix.type }}-dev-container
+          repository-name: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.container-name }}
         run: |
-          devcontainer build --config $CONTAINER_NAME.json --image-name $CONTAINER_NAME --workspace-folder .
-          docker push $CONTAINER_NAME
+          devcontainer build --config ${{ env.container-name }}.json --image-name ${{ env.repository-name }} --workspace-folder .
+          docker push ${{ env.repository-name }}
