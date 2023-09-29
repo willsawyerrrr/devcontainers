@@ -33,5 +33,5 @@ jobs:
         env:
           CONTAINER_NAME: ${{ matrix.type }}-dev-container
         run: |
-          devcontainer build --config $CONTAINER_NAME.json --image-name CONTAINER_NAME --workspace-folder .
-          docker push CONTAINER_NAME
+          devcontainer build --config $CONTAINER_NAME.json --image-name $CONTAINER_NAME --workspace-folder .
+          docker push $CONTAINER_NAME
