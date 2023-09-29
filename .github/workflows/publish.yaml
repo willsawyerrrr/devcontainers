@@ -27,7 +27,7 @@ jobs:
           node-version: "18"
 
       - name: Install DevContainer CLI
-        run: npm install -g devcontainer-cli
+        run: npm install -g @devcontainers/cli
 
       - name: Build and push image to Amazon ECR
         env:
