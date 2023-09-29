@@ -8,6 +8,6 @@ To use one of these configurations, create a `.devcontainer.json` or `.devcontai
 
 ```json
 {
-    "image": <aws-ecr-image-uri>
+    "image": docker.io/<docker-username>/<image-name>
 }
 ```
