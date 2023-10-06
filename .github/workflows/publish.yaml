@@ -61,7 +61,7 @@ jobs:
       - name: Build and Push Image to Docker Hub
         env:
           container-name: ${{ matrix.type }}-dev-container
-          repository-name: ${{ secrets.DOCKERHUB_USERNAME }}${{ matrix.type }}-dev-container
+          repository-name: ${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.type }}-dev-container
         run: |
           devcontainer build --config ${{ env.container-name }}.json --image-name ${{ env.repository-name }} --workspace-folder .
           docker push ${{ env.repository-name }}
