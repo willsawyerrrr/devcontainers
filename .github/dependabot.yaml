@@ -17,6 +17,6 @@ updates:
   - package-ecosystem: "pip"
     reviewers:
       - "SituDevelopment/employees"
-    directory: "/.github/workflows"
+    directory: "/"
     schedule:
       interval: "daily"
