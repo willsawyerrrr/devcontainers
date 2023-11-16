@@ -1,0 +1,6 @@
+{
+    "id": "web",
+    "version": "1.0.0",
+    "name": "Web Dev Container",
+    "description": "Dev Container configuration for web template"
+}

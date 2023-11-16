@@ -1,6 +1,6 @@
 {
     "name": "Python",
-    "image": "docker.io/situdeveloper/base-dev-container",
+    "image": "docker.io/situdeveloper/templates/base",
 
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
