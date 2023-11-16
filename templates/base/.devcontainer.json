@@ -11,5 +11,7 @@
         "vscode": {
             "extensions": ["GitHub.copilot", "eamodio.gitlens", "github.vscode-github-actions"]
         }
-    }
+    },
+
+    "postCreateCommand": "npm install"
 }
