@@ -3,7 +3,8 @@
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 
     "features": {
-        "ghcr.io/guiyomh/features/vim:0": {}
+        "ghcr.io/guiyomh/features/vim:0": {},
+        "ghcr.io/SituDevelopment/features/automation": {}
     },
 
     "customizations": {
