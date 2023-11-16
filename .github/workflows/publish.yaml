@@ -1,4 +1,4 @@
-name: Publish Images to Docker Hub
+name: Publish Dev Container Features and Templates
 
 on:
   push:
@@ -6,62 +6,36 @@ on:
       - main
 
 jobs:
-  publish-base:
+  publish-features:
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
+      - name: Publish Dev Container Features
+        uses: devcontainers/action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "18"
-
-      - name: Install DevContainer CLI
-        run: npm install -g @devcontainers/cli
-
-      - name: Build and Push Image to Docker Hub
+          publish-features: "true"
+          base-path-to-features: "./features"
+          features-namespace: "SituDevelopment/features"
         env:
-          container-name: base-dev-container
-          repository-name: ${{ secrets.DOCKERHUB_USERNAME }}/base-dev-container
-        run: |
-          devcontainer build --config ${{ env.container-name }}.json --image-name ${{ env.repository-name }} --workspace-folder .
-          docker push ${{ env.repository-name }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  publish-dependents:
-    needs: publish-base
+  publish-templates:
+    permissions:
+      packages: write
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        type: [python, web]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Login to Docker Hub
-        uses: docker/login-action@v3
+      - name: Publish Dev Container Templates
+        uses: devcontainers/action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "18"
-
-      - name: Install DevContainer CLI
-        run: npm install -g @devcontainers/cli
-
-      - name: Build and Push Image to Docker Hub
+          publish-templates: "true"
+          base-path-to-templates: "./templates"
+          templates-namespace: "SituDevelopment/templates"
         env:
-          container-name: ${{ matrix.type }}-dev-container
-          repository-name: ${{ secrets.DOCKERHUB_USERNAME }}/${{ matrix.type }}-dev-container
-        run: |
-          devcontainer build --config ${{ env.container-name }}.json --image-name ${{ env.repository-name }} --workspace-folder .
-          docker push ${{ env.repository-name }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
