@@ -1,6 +1,6 @@
 {
     "name": "Web",
-    "image": "docker.io/situdeveloper/templates/base",
+    "image": "ghcr.io/SituDevelopment/templates/base",
 
     "customizations": {
         "vscode": {
