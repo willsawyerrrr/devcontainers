@@ -1,13 +1,15 @@
-# Dev Containers
+# DevContainers
 
-Configuration files for [Development Containers](https://containers.dev/).
+Features and templates for DevContainers.
 
 ## Usage
 
-To use one of these configurations, create a `.devcontainer.json` or `.devcontainer/devcontainer.json` file with the following contents:
+See the `README.md` for each feature and template for individual usage details.
 
-```json
-{
-    "image": docker.io/<docker-username>/<image-name>
-}
-```
+## Extension
+
+See the specifications at:
+
+-   [Dev Containers](https://containers.dev/)
+-   [Features](https://containers.dev/implementors/features/)
+-   [Templates](https://containers.dev/implementors/templates/)
