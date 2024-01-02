@@ -16,8 +16,7 @@
                 "ms-python.black-formatter",
                 "ms-python.isort",
                 "ms-python.pylint",
-                "njpwerner.autodocstring",
-                "esbenp.prettier-vscode"
+                "njpwerner.autodocstring"
             ]
         }
     },
