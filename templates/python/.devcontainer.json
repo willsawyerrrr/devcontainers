@@ -1,6 +1,6 @@
 {
     "name": "Python",
-    "image": "ghcr.io/SituDevelopment/templates/base",
+    "image": "ghcr.io/situdevelopment/templates/base",
 
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
@@ -16,8 +16,7 @@
                 "ms-python.black-formatter",
                 "ms-python.isort",
                 "ms-python.pylint",
-                "njpwerner.autodocstring",
-                "esbenp.prettier-vscode"
+                "njpwerner.autodocstring"
             ]
         }
     },

@@ -6,6 +6,6 @@ Installs the latest suite of automation tools.
 
 ```json
 "features": {
-    "ghcr.io/SituDevelopment/features/automation": {}
+    "ghcr.io/situdevelopment/features/automation": {}
 }
 ```
