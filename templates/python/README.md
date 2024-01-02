@@ -5,5 +5,5 @@ Develop applications with Python.
 ## Example Usage
 
 ```json
-"image": "ghcr.io/SituDevelopment/templates/python"
+"image": "ghcr.io/situdevelopment/templates/python"
 ```

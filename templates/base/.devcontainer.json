@@ -4,7 +4,7 @@
 
     "features": {
         "ghcr.io/guiyomh/features/vim:0": {},
-        "ghcr.io/SituDevelopment/features/automation": {}
+        "ghcr.io/situdevelopment/features/automation": {}
     },
 
     "customizations": {

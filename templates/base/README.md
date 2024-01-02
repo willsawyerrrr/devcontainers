@@ -5,5 +5,5 @@ Generic base for any development.
 ## Example Usage
 
 ```json
-"image": "ghcr.io/SituDevelopment/templates/base"
+"image": "ghcr.io/situdevelopment/templates/base"
 ```

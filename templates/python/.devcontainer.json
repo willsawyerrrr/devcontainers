@@ -1,6 +1,6 @@
 {
     "name": "Python",
-    "image": "ghcr.io/SituDevelopment/templates/base",
+    "image": "ghcr.io/situdevelopment/templates/base",
 
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
