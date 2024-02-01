@@ -1,6 +1,6 @@
 {
     "name": "Web",
-    "image": "ghcr.io/situdevelopment/templates/base",
+    "image": "ghcr.io/situdevelopment/base-dev-container",
 
     "customizations": {
         "vscode": {
