@@ -21,6 +21,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish-templates:
+    needs: [publish-features]
     permissions:
       packages: write
     runs-on: ubuntu-latest
