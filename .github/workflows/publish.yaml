@@ -37,3 +37,35 @@ jobs:
           templates-namespace: "SituDevelopment/templates"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  prebuild-templates:
+    needs: [publish-features]
+    strategy:
+      matrix:
+        template: ["base", "python", "web"]
+      max-parallel: 1 # ensure `base` is built first
+    permissions:
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log into GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Dev Container CLI
+        run: npm install -g @devcontainers/cli
+
+      - name: Prebuild Dev Container Template
+        run: devcontainer build --workspace-folder ./templates/${{ matrix.template }} --image-name ${{ matrix.template }}-dev-container
+
+      - name: Push Dev Container Image
+        run: |
+          docker tag ${{ matrix.template }}-dev-container ghcr.io/situdevelopment/${{ matrix.template }}-dev-container:latest
+          docker tag ${{ matrix.template }}-dev-container ghcr.io/situdevelopment/${{ matrix.template }}-dev-container:${{ github.sha }}
+          docker push --all-tags ghcr.io/situdevelopment/${{ matrix.template }}-dev-container
