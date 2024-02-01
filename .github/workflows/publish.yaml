@@ -1,6 +1,8 @@
 name: Publish Dev Container Features and Templates
 
-on: push
+on:
+  push:
+    branches: main
 
 jobs:
   publish-features:
