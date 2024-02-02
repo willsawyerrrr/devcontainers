@@ -1,5 +1,3 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-git clone https://github.com/SituDevelopment/automation.git /usr/local/automation
-
-export PATH=$PATH:/usr/local/automation
+curl -sSL https://raw.githubusercontent.com/SituDevelopment/automation/main/install.sh | bash
