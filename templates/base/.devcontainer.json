@@ -10,10 +10,10 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "eamodio.gitlens",
                 "esbenp.prettier-vscode",
                 "GitHub.copilot",
-                "github.vscode-github-actions"
+                "github.vscode-github-actions",
+                "maattdd.gitless"
             ]
         }
     },
