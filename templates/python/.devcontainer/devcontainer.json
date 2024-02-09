@@ -1,0 +1,29 @@
+{
+    "name": "Python",
+    "image": "ghcr.io/situdevelopment/base-dev-container",
+
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "${templateOption:pythonVersion}"
+        }
+    },
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "charliermarsh.ruff",
+                "ms-python.black-formatter",
+                "ms-python.isort",
+                "ms-python.pylint",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "njpwerner.autodocstring"
+            ],
+            "settings": {
+                "autoDocstring.customTemplatePath": "/usr/local/share/style/docstring-template.mustache"
+            }
+        }
+    },
+
+    "postCreateCommand": ".devcontainer/install-with.sh ${templateOption:dependencyManager}"
+}
