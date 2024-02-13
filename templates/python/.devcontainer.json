@@ -28,5 +28,5 @@
         }
     },
 
-    "postCreateCommand": "pip install poetry && poetry install"
+    "postCreateCommand": "pip install poetry && poetry config virtualenvs.create false && poetry install"
 }
