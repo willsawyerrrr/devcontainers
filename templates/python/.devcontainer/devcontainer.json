@@ -4,8 +4,8 @@
 
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
-            "version": "${templateOption:pythonVersion}"
-        }
+            "version": "${templateOption:pythonVersion}",
+        },
     },
 
     "customizations": {
@@ -17,13 +17,16 @@
                 "ms-python.pylint",
                 "ms-python.python",
                 "ms-python.vscode-pylance",
-                "njpwerner.autodocstring"
+                "njpwerner.autodocstring",
             ],
             "settings": {
-                "autoDocstring.customTemplatePath": "/usr/local/share/style/docstring-template.mustache"
-            }
-        }
+                "autoDocstring.customTemplatePath": "/usr/local/share/style/docstring-template.mustache",
+                "[python]": {
+                    "python.analysis.typeCheckingMode": "strict",
+                },
+            },
+        },
     },
 
-    "postCreateCommand": ".devcontainer/install-with.sh ${templateOption:dependencyManager}"
+    "postCreateCommand": ".devcontainer/install-with.sh ${templateOption:dependencyManager}",
 }
