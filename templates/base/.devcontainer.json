@@ -21,5 +21,6 @@
         }
     },
 
+    // https://github.com/devcontainers/features/tree/main/src/node#using-nvm-from-postcreatecommand-or-another-lifecycle-command
     "postCreateCommand": ". ${NVM_DIR}/nvm.sh && nvm install --lts && npm install"
 }
