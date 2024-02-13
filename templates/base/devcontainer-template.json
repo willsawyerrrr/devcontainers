@@ -2,5 +2,13 @@
     "id": "base",
     "version": "1.0.0",
     "name": "Base Dev Container",
-    "description": "Base Dev Container template"
+    "description": "Base Dev Container template",
+    "options": {
+        "nodeVersion": {
+            "type": "string",
+            "description": "The version of Node to use.\nThis will control the version passed to the Node feature.",
+            "proposals": ["18, 20"],
+            "default": "20"
+        }
+    }
 }

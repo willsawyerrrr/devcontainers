@@ -3,6 +3,9 @@
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 
     "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "${templateOption:nodeVersion}"
+        },
         "ghcr.io/guiyomh/features/vim:0": {},
         "ghcr.io/situdevelopment/features/automation": {}
     },
@@ -18,5 +21,5 @@
         }
     },
 
-    "postCreateCommand": "npm install"
+    "postCreateCommand": ". ${NVM_DIR}/nvm.sh && nvm install --lts && npm install"
 }
