@@ -4,7 +4,7 @@
 
     "features": {
         "ghcr.io/devcontainers/features/node:1": {
-            "version": "${templateOption:nodeVersion}"
+            "version": "20"
         },
         "ghcr.io/guiyomh/features/vim:0": {},
         "ghcr.io/situdevelopment/features/automation": {}
@@ -21,6 +21,5 @@
         }
     },
 
-    // https://github.com/devcontainers/features/tree/main/src/node#using-nvm-from-postcreatecommand-or-another-lifecycle-command
-    "postCreateCommand": ". ${NVM_DIR}/nvm.sh && nvm install --lts && npm install"
+    "postCreateCommand": "npm install"
 }
