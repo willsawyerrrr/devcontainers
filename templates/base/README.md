@@ -22,6 +22,6 @@ FROM ghcr.io/situdevelopment/templates/base
 # docker-compose.yaml
 
 services:
-  my-service:
-    image: ghcr.io/situdevelopment/templates/base
+    my-service:
+        image: ghcr.io/situdevelopment/templates/base
 ```
