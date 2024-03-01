@@ -5,7 +5,11 @@ Installs the latest suite of automation tools.
 ## Example Usage
 
 ```json
-"features": {
-    "ghcr.io/situdevelopment/features/automation": {}
+// .devcontainer.json or .devcontainer/devcontainer.json
+
+{
+    "features": {
+        "ghcr.io/situdevelopment/features/automation": {}
+    }
 }
 ```
