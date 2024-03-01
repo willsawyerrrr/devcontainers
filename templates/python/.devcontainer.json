@@ -1,10 +1,10 @@
 {
     "name": "Python",
-    "image": "ghcr.io/situdevelopment/base-dev-container",
+    "image": "ghcr.io/situdevelopment/dev-container-node-${localEnv:NODE_VERSION}",
 
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
-            "version": "3.10"
+            "version": "${localEnv:PYTHON_VERSION}"
         }
     },
 
