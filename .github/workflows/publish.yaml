@@ -44,7 +44,7 @@ jobs:
     needs: [publish-features]
     strategy:
       matrix:
-        template: ["base", "python", "web"]
+        template: ["base", "python"]
       max-parallel: 1 # ensure `base` is built first
     permissions:
       packages: write
