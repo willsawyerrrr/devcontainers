@@ -106,7 +106,7 @@ jobs:
       - name: Prebuild Dev Container Template
         env:
           NODE_VERSION: ${{ matrix.nodeVersion }}
-        run: devcontainer build --workspace-folder ./templates/base --image-name ${{ env.IMAGE_NAME }}
+        run: devcontainer build --workspace-folder ./templates/python --image-name ${{ env.IMAGE_NAME }}
 
       - name: Push Dev Container Image
         run: |
