@@ -81,7 +81,7 @@ jobs:
     strategy:
       matrix:
         nodeVersion: [14, 16, 18, 20]
-        pythonVersion: [3.8, 3.9, 3.10, 3.11, 3.12]
+        pythonVersion: ["3.8", "3.9", "3.10", "3.11", "3.12"]
     env:
       NODE_VERSION: ${{ matrix.nodeVersion }}
       PYTHON_VERSION: ${{ matrix.pythonVersion }}
