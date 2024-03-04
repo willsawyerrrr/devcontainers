@@ -4,7 +4,7 @@
 
     "features": {
         "ghcr.io/devcontainers/features/node:1": {
-            "version": "20"
+            "version": "${localEnv:NODE_VERSION}"
         },
         "ghcr.io/guiyomh/features/vim:0": {},
         "ghcr.io/situdevelopment/features/automation": {}

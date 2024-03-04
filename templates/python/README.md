@@ -1,4 +1,4 @@
-# Python (python)
+# Python
 
 Develop applications with Python.
 
@@ -8,14 +8,14 @@ Develop applications with Python.
 // .devcontainer.json or .devcontainer/devcontainer.json
 
 {
-    "image": "ghcr.io/situdevelopment/templates/python"
+    "image": "ghcr.io/situdevelopment/templates/dev-container-node-${NODE_VERSION}-python-${PYTHON_VERSION}"
 }
 ```
 
 ```dockerfile
 # Dockerfile
 
-FROM ghcr.io/situdevelopment/templates/python
+FROM ghcr.io/situdevelopment/templates/dev-container-node-${NODE_VERSION}-python-${PYTHON_VERSION}
 ```
 
 ```yaml
@@ -23,5 +23,5 @@ FROM ghcr.io/situdevelopment/templates/python
 
 services:
     my-service:
-        image: ghcr.io/situdevelopment/templates/python
+        image: ghcr.io/situdevelopment/templates/dev-container-node-${NODE_VERSION}-python-${PYTHON_VERSION}
 ```

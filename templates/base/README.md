@@ -1,4 +1,4 @@
-# Generic Ubuntu Base (base)
+# Ubuntu Base
 
 Generic base for any development.
 
@@ -8,14 +8,14 @@ Generic base for any development.
 // .devcontainer.json or .devcontainer/devcontainer.json
 
 {
-    "image": "ghcr.io/situdevelopment/templates/base"
+    "image": "ghcr.io/situdevelopment/templates/dev-container-node-${NODE_VERSION}"
 }
 ```
 
 ```dockerfile
 # Dockerfile
 
-FROM ghcr.io/situdevelopment/templates/base
+FROM ghcr.io/situdevelopment/templates/dev-container-node-${NODE_VERSION}
 ```
 
 ```yaml
@@ -23,5 +23,5 @@ FROM ghcr.io/situdevelopment/templates/base
 
 services:
     my-service:
-        image: ghcr.io/situdevelopment/templates/base
+        image: ghcr.io/situdevelopment/templates/dev-container-node-${NODE_VERSION}
 ```
