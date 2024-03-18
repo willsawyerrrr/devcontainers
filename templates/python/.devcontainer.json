@@ -1,6 +1,6 @@
 {
     "name": "Python",
-    "image": "ghcr.io/situdevelopment/dev-container-node-${localEnv:NODE_VERSION}",
+    "image": "ghcr.io/situdevelopment/devcontainers/node-${localEnv:NODE_VERSION}",
 
     "features": {
         "ghcr.io/devcontainers/features/python:1": {
@@ -22,6 +22,7 @@
             "settings": {
                 "autoDocstring.customTemplatePath": "/usr/local/share/style/docstring-template.mustache",
                 "[python]": {
+                    "editor.rulers": [100],
                     "python.analysis.typeCheckingMode": "strict",
                     "python.testing.pytestArgs": ["tests"],
                     "python.testing.pytestEnabled": true,
