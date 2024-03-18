@@ -8,14 +8,14 @@ Generic base for any development.
 // .devcontainer.json or .devcontainer/devcontainer.json
 
 {
-    "image": "ghcr.io/situdevelopment/templates/dev-container-node-${NODE_VERSION}"
+    "image": "ghcr.io/situdevelopment/devcontainers/node-${NODE_VERSION}"
 }
 ```
 
 ```dockerfile
 # Dockerfile
 
-FROM ghcr.io/situdevelopment/templates/dev-container-node-${NODE_VERSION}
+FROM ghcr.io/situdevelopment/devcontainers/node-${NODE_VERSION}
 ```
 
 ```yaml
@@ -23,5 +23,5 @@ FROM ghcr.io/situdevelopment/templates/dev-container-node-${NODE_VERSION}
 
 services:
     my-service:
-        image: ghcr.io/situdevelopment/templates/dev-container-node-${NODE_VERSION}
+        image: ghcr.io/situdevelopment/devcontainers/node-${NODE_VERSION}
 ```
