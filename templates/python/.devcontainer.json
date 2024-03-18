@@ -22,6 +22,7 @@
             "settings": {
                 "autoDocstring.customTemplatePath": "/usr/local/share/style/docstring-template.mustache",
                 "[python]": {
+                    "editor.rulers": [100],
                     "python.analysis.typeCheckingMode": "strict",
                     "python.testing.pytestArgs": ["tests"],
                     "python.testing.pytestEnabled": true,
