@@ -7,14 +7,14 @@
             "version": "${localEnv:NODE_VERSION}"
         },
         "ghcr.io/guiyomh/features/vim:0": {},
-        "ghcr.io/situdevelopment/features/automation": {}
+        "ghcr.io/situdevelopment/devcontainer-features/automation:1.0.0": {}
     },
 
     "customizations": {
         "vscode": {
             "extensions": [
                 "esbenp.prettier-vscode",
-                "GitHub.copilot",
+                "github.copilot",
                 "github.vscode-github-actions",
                 "maattdd.gitless"
             ]

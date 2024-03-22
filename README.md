@@ -1,15 +1,14 @@
-# devcontainers
+# Dev Container Templates
 
-Features and templates for devcontainers.
+Centralised templates for dev containers.
 
 ## Usage
 
-See the `README.md` for each feature and template for individual usage details.
+See the `README.md` for each template for usage details.
 
 ## Extension
 
 See the specifications at:
 
 -   [Development Containers](https://containers.dev/)
--   [Features](https://containers.dev/implementors/features/)
 -   [Templates](https://containers.dev/implementors/templates/)
