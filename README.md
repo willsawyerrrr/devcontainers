@@ -1,6 +1,6 @@
-# devcontainers
+# Dev Container Templates
 
-Devcontainers templates.
+Centralised templates for dev containers.
 
 ## Usage
 
