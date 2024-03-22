@@ -14,7 +14,7 @@
         "vscode": {
             "extensions": [
                 "esbenp.prettier-vscode",
-                "GitHub.copilot",
+                "github.copilot",
                 "github.vscode-github-actions",
                 "maattdd.gitless"
             ]
