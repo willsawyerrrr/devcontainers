@@ -2,5 +2,5 @@
     "id": "python",
     "version": "1.0.0",
     "name": "Python Dev Container",
-    "description": "Dev Container configuration for Python template"
+    "description": "Python Dev Container template"
 }
