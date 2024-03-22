@@ -28,7 +28,7 @@ jobs:
         nodeVersion: [14, 16, 18, 20]
     env:
       NODE_VERSION: ${{ matrix.nodeVersion }}
-      IMAGE_NAME: devcontainers/node-${{ matrix.nodeVersion }}
+      IMAGE_NAME: devcontainer-node-${{ matrix.nodeVersion }}
     permissions:
       packages: write
     runs-on: ubuntu-latest
@@ -66,7 +66,7 @@ jobs:
     env:
       NODE_VERSION: ${{ matrix.nodeVersion }}
       PYTHON_VERSION: ${{ matrix.pythonVersion }}
-      IMAGE_NAME: devcontainers/node-${{ matrix.nodeVersion }}-python-${{ matrix.pythonVersion }}
+      IMAGE_NAME: devcontainer-node-${{ matrix.nodeVersion }}-python-${{ matrix.pythonVersion }}
     permissions:
       packages: write
     runs-on: ubuntu-latest
