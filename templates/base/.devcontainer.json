@@ -16,7 +16,8 @@
                 "esbenp.prettier-vscode",
                 "github.copilot",
                 "github.vscode-github-actions",
-                "maattdd.gitless"
+                "maattdd.gitless",
+                "ms-azuretools.vscode-docker"
             ]
         }
     },
