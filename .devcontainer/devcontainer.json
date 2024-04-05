@@ -1,0 +1,4 @@
+{
+    "name": "Dev Container Templates",
+    "image": "ghcr.io/situdevelopment/devcontainer-node-20"
+}
