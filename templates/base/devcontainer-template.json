@@ -1,6 +1,6 @@
 {
     "id": "base",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "Base Dev Container",
     "description": "Base Dev Container template"
 }
