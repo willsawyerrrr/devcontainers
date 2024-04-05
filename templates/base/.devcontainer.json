@@ -13,10 +13,10 @@
     "customizations": {
         "vscode": {
             "extensions": [
+                "eamodio.gitlens",
                 "esbenp.prettier-vscode",
                 "github.copilot",
                 "github.vscode-github-actions",
-                "maattdd.gitless",
                 "ms-azuretools.vscode-docker"
             ]
         }
