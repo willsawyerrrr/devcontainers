@@ -3,6 +3,7 @@
     "image": "ghcr.io/situdevelopment/devcontainer-node-${localEnv:NODE_VERSION}",
 
     "features": {
+        "ghcr.io/devcontainers-contrib/features/poetry:2": {},
         "ghcr.io/devcontainers/features/python:1": {
             "version": "${localEnv:PYTHON_VERSION}"
         }
@@ -33,5 +34,5 @@
         }
     },
 
-    "postCreateCommand": "pip install poetry && poetry config virtualenvs.create false && poetry install"
+    "postCreateCommand": "poetry config virtualenvs.create false && poetry install"
 }
