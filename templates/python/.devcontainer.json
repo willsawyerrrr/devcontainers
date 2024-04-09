@@ -22,14 +22,14 @@
                 "tamasfe.even-better-toml"
             ],
             "settings": {
-                "autoDocstring.customTemplatePath": "/usr/local/share/style/docstring-template.mustache",
                 "[python]": {
-                    "editor.rulers": [100],
-                    "python.analysis.typeCheckingMode": "strict",
-                    "python.testing.pytestArgs": ["tests"],
-                    "python.testing.pytestEnabled": true,
-                    "python.testing.unittestEnabled": false
-                }
+                    "editor.defaultFormatter": "ms-python.black-formatter"
+                },
+                "autoDocstring.customTemplatePath": "/usr/local/share/style/docstring-template.mustache",
+                "python.analysis.typeCheckingMode": "strict",
+                "python.testing.pytestArgs": ["tests"],
+                "python.testing.pytestEnabled": true,
+                "python.testing.unittestEnabled": false
             }
         }
     },
