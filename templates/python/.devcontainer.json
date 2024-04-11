@@ -12,13 +12,13 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "be5invis.toml",
                 "ms-python.black-formatter",
                 "ms-python.isort",
                 "ms-python.pylint",
                 "ms-python.python",
                 "ms-python.vscode-pylance",
-                "njpwerner.autodocstring"
+                "njpwerner.autodocstring",
+                "tamasfe.even-better-toml"
             ],
             "settings": {
                 "[python]": {
