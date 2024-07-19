@@ -33,5 +33,9 @@
         }
     },
 
-    "postCreateCommand": "poetry config virtualenvs.create false && poetry install"
+    "postCreateCommand": "poetry config virtualenvs.create false && poetry install",
+
+    "containerEnv": {
+        "PYTHONDONTWRITEBYTECODE": "1"
+    }
 }
