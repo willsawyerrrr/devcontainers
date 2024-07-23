@@ -21,10 +21,6 @@ updates:
         patterns:
           - "pydantic"
           - "pydantic-core"
-      pylint:
-        patterns:
-          - "astroid"
-          - "pylint"
     schedule:
       interval: "weekly"
       time: "13:00"
