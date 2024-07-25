@@ -20,7 +20,7 @@
             ],
             "settings": {
                 "[python]": {
-                    "editor.defaultFormatter": "charliemarsh.ruff"
+                    "editor.defaultFormatter": "charliermarsh.ruff"
                 },
                 "autoDocstring.customTemplatePath": "/usr/local/share/style/docstring-template.mustache",
                 "python.testing.pytestArgs": ["tests"],
