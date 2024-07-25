@@ -1,6 +1,6 @@
 {
     "name": "Python",
-    "image": "ghcr.io/situdevelopment/devcontainer-node-${localEnv:NODE_VERSION}:1.2.0",
+    "image": "ghcr.io/situdevelopment/devcontainer-node-${localEnv:NODE_VERSION}",
 
     "features": {
         "ghcr.io/devcontainers-contrib/features/poetry:2": {},
