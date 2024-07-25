@@ -1,6 +1,6 @@
 {
     "name": "Python",
-    "image": "ghcr.io/situdevelopment/devcontainer-node-${localEnv:NODE_VERSION}",
+    "image": "ghcr.io/situdevelopment/devcontainer-node-${localEnv:NODE_VERSION}:1.2.0",
 
     "features": {
         "ghcr.io/devcontainers-contrib/features/poetry:2": {},
@@ -20,7 +20,7 @@
             ],
             "settings": {
                 "[python]": {
-                    "editor.defaultFormatter": "charliemarsh.ruff"
+                    "editor.defaultFormatter": "charliermarsh.ruff"
                 },
                 "autoDocstring.customTemplatePath": "/usr/local/share/style/docstring-template.mustache",
                 "python.testing.pytestArgs": ["tests"],
