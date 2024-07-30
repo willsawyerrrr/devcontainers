@@ -25,7 +25,7 @@ jobs:
   prebuild-base-images:
     strategy:
       matrix:
-        nodeVersion: [14, 16, 18, 20]
+        nodeVersion: [20, 18, 16, 14]
     env:
       NODE_VERSION: ${{ matrix.nodeVersion }}
       IMAGE_NAME: devcontainer-node-${{ matrix.nodeVersion }}
@@ -61,8 +61,8 @@ jobs:
     needs: prebuild-base-images
     strategy:
       matrix:
-        nodeVersion: [14, 16, 18, 20]
-        pythonVersion: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        nodeVersion: [20, 18, 16, 14]
+        pythonVersion: ["3.12", "3.11", "3.10", "3.9", "3.8"]
     env:
       NODE_VERSION: ${{ matrix.nodeVersion }}
       PYTHON_VERSION: ${{ matrix.pythonVersion }}
