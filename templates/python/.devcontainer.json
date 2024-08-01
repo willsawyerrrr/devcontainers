@@ -23,9 +23,6 @@
                     "editor.defaultFormatter": "charliermarsh.ruff"
                 },
                 "autoDocstring.customTemplatePath": "/usr/local/share/style/docstring-template.mustache",
-                "evenBetterToml.schema.associations": {
-                    "pyproject.toml": "https://raw.githubusercontent.com/willsawyerrrr/status-check-runner/main/pyproject.json"
-                },
                 "python.testing.pytestArgs": ["tests"],
                 "python.testing.pytestEnabled": true,
                 "python.testing.unittestEnabled": false
