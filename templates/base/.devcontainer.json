@@ -35,7 +35,7 @@
 
     "postCreateCommand": {
         "npm-deps": "npm install",
-        "git-completion": "echo 'source /usr/share/bash-completion/completions/git' >> /etc/bash.bashrc"
+        "git-completion": "echo 'source /usr/share/bash-completion/completions/git' | sudo tee --append /etc/bash.bashrc"
     },
 
     // required for Dev Containers which use Docker Compose: https://github.com/microsoft/vscode-remote-release/issues/7923
