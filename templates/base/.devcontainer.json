@@ -33,7 +33,10 @@
         }
     },
 
-    "postCreateCommand": "npm install",
+    "postCreateCommand": {
+        "npm-deps": "npm install",
+        "git-completion": "echo 'source /usr/share/bash-completion/completions/git' >> /etc/bash.bashrc"
+    },
 
     // required for Dev Containers which use Docker Compose: https://github.com/microsoft/vscode-remote-release/issues/7923
     "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
