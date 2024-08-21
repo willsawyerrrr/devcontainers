@@ -30,7 +30,10 @@
         }
     },
 
-    "postCreateCommand": "poetry config virtualenvs.create false && poetry install",
+    "postCreateCommand": {
+        "poetry-plugin-sort": "sudo `which pipx` inject poetry poetry-plugin-sort",
+        "poetry-deps": "poetry config virtualenvs.create false && poetry install"
+    },
 
     "containerEnv": {
         "PYTHONDONTWRITEBYTECODE": "1"
