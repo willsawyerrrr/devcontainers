@@ -1,6 +1,6 @@
 {
     "name": "Ubuntu Base",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
 
     "containerEnv": {
         "GH_TOKEN": "${localEnv:GH_TOKEN}",
