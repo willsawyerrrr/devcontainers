@@ -10,5 +10,5 @@ See the `README.md` for each template for usage details.
 
 See the specifications at:
 
--   [Development Containers](https://containers.dev/)
--   [Templates](https://containers.dev/implementors/templates/)
+- [Development Containers](https://containers.dev/)
+- [Templates](https://containers.dev/implementors/templates/)
