@@ -17,9 +17,9 @@ jobs:
       - name: Publish Dev Container Templates
         uses: devcontainers/action@v1
         with:
-          publish-templates: "true"
-          base-path-to-templates: "./templates"
-          templates-namespace: "SituDevelopment/devcontainer-templates"
+          publish-templates: true
+          base-path-to-templates: ./templates
+          templates-namespace: willsawyerrrr/devcontainer-templates
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -54,9 +54,9 @@ jobs:
 
       - name: Push Dev Container Image
         run: |
-          docker tag ${{ env.IMAGE_NAME }} ghcr.io/situdevelopment/${{ env.IMAGE_NAME }}:latest
-          docker tag ${{ env.IMAGE_NAME }} ghcr.io/situdevelopment/${{ env.IMAGE_NAME }}:${{ github.sha }}
-          docker push --all-tags ghcr.io/situdevelopment/${{ env.IMAGE_NAME }}
+          docker tag ${{ env.IMAGE_NAME }} ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}:latest
+          docker tag ${{ env.IMAGE_NAME }} ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          docker push --all-tags ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}
 
   prebuild-python-images:
     needs: prebuild-base-images
@@ -92,6 +92,6 @@ jobs:
 
       - name: Push Dev Container Image
         run: |
-          docker tag ${{ env.IMAGE_NAME }} ghcr.io/situdevelopment/${{ env.IMAGE_NAME }}:latest
-          docker tag ${{ env.IMAGE_NAME }} ghcr.io/situdevelopment/${{ env.IMAGE_NAME }}:${{ github.sha }}
-          docker push --all-tags ghcr.io/situdevelopment/${{ env.IMAGE_NAME }}
+          docker tag ${{ env.IMAGE_NAME }} ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}:latest
+          docker tag ${{ env.IMAGE_NAME }} ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          docker push --all-tags ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}

@@ -1,6 +1,6 @@
 {
     "name": "Dev Container Templates",
-    "image": "ghcr.io/situdevelopment/devcontainer-node-20",
+    "image": "ghcr.io/willsawyerrrr/devcontainer-node-20",
 
     "features": {
         "ghcr.io/devcontainers-contrib/features/devcontainers-cli:1": {}

@@ -21,14 +21,3 @@ updates:
       time: "13:00"
       timezone: "Australia/Brisbane"
 
-  - package-ecosystem: "pip"
-    directory: "/"
-    groups:
-      pydantic:
-        patterns:
-          - "pydantic"
-          - "pydantic-core"
-    schedule:
-      interval: "weekly"
-      time: "13:00"
-      timezone: "Australia/Brisbane"

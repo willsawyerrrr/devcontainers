@@ -13,8 +13,7 @@
         "ghcr.io/devcontainers/features/node:1": {
             "version": "${localEnv:NODE_VERSION}"
         },
-        "ghcr.io/guiyomh/features/vim:0": {},
-        "ghcr.io/situdevelopment/devcontainer-features/automation:1": {}
+        "ghcr.io/guiyomh/features/vim:0": {}
     },
 
     "customizations": {
@@ -34,8 +33,7 @@
     },
 
     "postCreateCommand": {
-        "npm-deps": "npm install",
-        "git-completion": "echo 'source /usr/share/bash-completion/completions/git' | sudo tee --append /etc/bash.bashrc"
+        "npm-deps": "npm install"
     },
 
     // required for Dev Containers which use Docker Compose: https://github.com/microsoft/vscode-remote-release/issues/7923
