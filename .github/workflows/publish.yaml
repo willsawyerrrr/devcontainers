@@ -8,6 +8,7 @@ on:
 jobs:
   publish-templates:
     permissions:
+      contents: read
       packages: write
     runs-on: ubuntu-latest
     steps:
@@ -31,6 +32,7 @@ jobs:
       NODE_VERSION: ${{ matrix.nodeVersion }}
       IMAGE_NAME: devcontainer-node-${{ matrix.nodeVersion }}
     permissions:
+      contents: read
       packages: write
     runs-on: ubuntu-latest
     steps:
@@ -69,6 +71,7 @@ jobs:
       PYTHON_VERSION: ${{ matrix.pythonVersion }}
       IMAGE_NAME: devcontainer-node-${{ matrix.nodeVersion }}-python-${{ matrix.pythonVersion }}
     permissions:
+      contents: read
       packages: write
     runs-on: ubuntu-latest
     steps:
