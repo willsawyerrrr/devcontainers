@@ -24,6 +24,7 @@
                 "editor.rulers": [100]
             },
             "extensions": [
+                "1Password.op-vscode",
                 "eamodio.gitlens",
                 "esbenp.prettier-vscode",
                 "github.vscode-github-actions",
