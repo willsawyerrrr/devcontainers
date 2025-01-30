@@ -13,6 +13,7 @@
         "ghcr.io/devcontainers/features/node:1": {
             "version": "${localEnv:NODE_VERSION}"
         },
+        "ghcr.io/flexwie/devcontainer-features/op:1": {},
         "ghcr.io/guiyomh/features/vim:0": {}
     },
 
