@@ -22,7 +22,6 @@
                 "[python]": {
                     "editor.defaultFormatter": "charliermarsh.ruff"
                 },
-                "autoDocstring.customTemplatePath": "/usr/local/share/style/docstring-template.mustache",
                 "python.analysis.typeCheckingMode": "off",
                 "python.testing.pytestArgs": ["tests"],
                 "python.testing.pytestEnabled": true,
