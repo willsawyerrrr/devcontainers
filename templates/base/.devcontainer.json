@@ -38,6 +38,8 @@
         "npm-deps": "npm install"
     },
 
-    // required for Dev Containers which use Docker Compose: https://github.com/microsoft/vscode-remote-release/issues/7923
-    "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+    "postStartCommand": {
+        // required for Dev Containers which use Docker Compose: https://github.com/microsoft/vscode-remote-release/issues/7923
+        "mark-directory-git-safe": "git config --global --add safe.directory ${containerWorkspaceFolder}"
+    }
 }
