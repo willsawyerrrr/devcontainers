@@ -14,7 +14,8 @@
             "version": "${localEnv:NODE_VERSION}"
         },
         "ghcr.io/flexwie/devcontainer-features/op:1": {},
-        "ghcr.io/guiyomh/features/vim:0": {}
+        "ghcr.io/guiyomh/features/vim:0": {},
+        "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
     },
 
     "customizations": {
