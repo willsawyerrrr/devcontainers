@@ -8,14 +8,14 @@ Generic base for any development.
 // .devcontainer.json or .devcontainer/devcontainer.json
 
 {
-    "image": "ghcr.io/willsawyerrrr/devcontainer-node-${NODE_VERSION}"
+    "image": "ghcr.io/willsawyerrrr/devcontainer"
 }
 ```
 
 ```dockerfile
 # Dockerfile
 
-FROM ghcr.io/willsawyerrrr/devcontainer-node-${NODE_VERSION}
+FROM ghcr.io/willsawyerrrr/devcontainer
 ```
 
 ```yaml
@@ -23,5 +23,5 @@ FROM ghcr.io/willsawyerrrr/devcontainer-node-${NODE_VERSION}
 
 services:
     my-service:
-        image: ghcr.io/willsawyerrrr/devcontainer-node-${NODE_VERSION}
+        image: ghcr.io/willsawyerrrr/devcontainer
 ```
