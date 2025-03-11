@@ -1,0 +1,23 @@
+{
+    "name": "Python",
+    "image": "ghcr.io/willsawyerrrr/devcontainer",
+
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "${localEnv:NODE_VERSION}"
+        }
+    },
+
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.defaultFormatter": "esbenp.prettier-vscode"
+            },
+            "extensions": ["esbenp.prettier-vscode"]
+        }
+    },
+
+    "postCreateCommand": {
+        "npm-deps": "npm install"
+    }
+}

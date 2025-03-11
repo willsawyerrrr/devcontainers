@@ -1,6 +1,6 @@
 {
     "name": "Python",
-    "image": "ghcr.io/willsawyerrrr/devcontainer-node-${localEnv:NODE_VERSION}",
+    "image": "ghcr.io/willsawyerrrr/devcontainer",
 
     "features": {
         "ghcr.io/devcontainers-contrib/features/poetry:2": {},

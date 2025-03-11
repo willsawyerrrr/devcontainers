@@ -25,6 +25,71 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   prebuild-base-images:
+    env:
+      IMAGE_NAME: devcontainer
+    permissions:
+      contents: read
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log into GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Dev Container CLI
+        run: npm install -g @devcontainers/cli
+
+      - name: Prebuild Dev Container Template
+        run: devcontainer build --workspace-folder ./templates/base --image-name ${{ env.IMAGE_NAME }}
+
+      - name: Push Dev Container Image
+        run: |
+          docker tag ${{ env.IMAGE_NAME }} ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}:latest
+          docker tag ${{ env.IMAGE_NAME }} ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          docker push --all-tags ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}
+
+  prebuild-python-images:
+    needs: prebuild-base-images
+    strategy:
+      matrix:
+        pythonVersion: ["3.12", "3.11", "3.10", "3.9", "3.8"]
+    env:
+      PYTHON_VERSION: ${{ matrix.pythonVersion }}
+      IMAGE_NAME: devcontainer-python-${{ matrix.pythonVersion }}
+    permissions:
+      contents: read
+      packages: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log into GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install Dev Container CLI
+        run: npm install -g @devcontainers/cli
+
+      - name: Prebuild Dev Container Template
+        run: devcontainer build --workspace-folder ./templates/python --image-name ${{ env.IMAGE_NAME }}
+
+      - name: Push Dev Container Image
+        run: |
+          docker tag ${{ env.IMAGE_NAME }} ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}:latest
+          docker tag ${{ env.IMAGE_NAME }} ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          docker push --all-tags ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}
+
+  prebuild-web-images:
     strategy:
       matrix:
         nodeVersion: [20, 18, 16, 14]
@@ -52,46 +117,7 @@ jobs:
       - name: Prebuild Dev Container Template
         env:
           NODE_VERSION: ${{ matrix.nodeVersion }}
-        run: devcontainer build --workspace-folder ./templates/base --image-name ${{ env.IMAGE_NAME }}
-
-      - name: Push Dev Container Image
-        run: |
-          docker tag ${{ env.IMAGE_NAME }} ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}:latest
-          docker tag ${{ env.IMAGE_NAME }} ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}:${{ github.sha }}
-          docker push --all-tags ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}
-
-  prebuild-python-images:
-    needs: prebuild-base-images
-    strategy:
-      matrix:
-        nodeVersion: [20, 18, 16, 14]
-        pythonVersion: ["3.12", "3.11", "3.10", "3.9", "3.8"]
-    env:
-      NODE_VERSION: ${{ matrix.nodeVersion }}
-      PYTHON_VERSION: ${{ matrix.pythonVersion }}
-      IMAGE_NAME: devcontainer-node-${{ matrix.nodeVersion }}-python-${{ matrix.pythonVersion }}
-    permissions:
-      contents: read
-      packages: write
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Log into GHCR
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Install Dev Container CLI
-        run: npm install -g @devcontainers/cli
-
-      - name: Prebuild Dev Container Template
-        env:
-          NODE_VERSION: ${{ matrix.nodeVersion }}
-        run: devcontainer build --workspace-folder ./templates/python --image-name ${{ env.IMAGE_NAME }}
+        run: devcontainer build --workspace-folder ./templates/web --image-name ${{ env.IMAGE_NAME }}
 
       - name: Push Dev Container Image
         run: |

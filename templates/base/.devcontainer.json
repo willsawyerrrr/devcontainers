@@ -10,9 +10,6 @@
     "features": {
         "ghcr.io/devcontainers/features/aws-cli:1": {},
         "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-        "ghcr.io/devcontainers/features/node:1": {
-            "version": "${localEnv:NODE_VERSION}"
-        },
         "ghcr.io/flexwie/devcontainer-features/op:1": {},
         "ghcr.io/guiyomh/features/vim:0": {},
         "ghcr.io/meaningful-ooo/devcontainer-features/homebrew:2": {}
@@ -21,22 +18,16 @@
     "customizations": {
         "vscode": {
             "settings": {
-                "editor.defaultFormatter": "esbenp.prettier-vscode",
                 "editor.rulers": [100]
             },
             "extensions": [
                 "1Password.op-vscode",
                 "eamodio.gitlens",
-                "esbenp.prettier-vscode",
                 "github.vscode-github-actions",
                 "ms-azuretools.vscode-docker",
                 "redhat.vscode-yaml"
             ]
         }
-    },
-
-    "postCreateCommand": {
-        "npm-deps": "npm install"
     },
 
     "postStartCommand": {

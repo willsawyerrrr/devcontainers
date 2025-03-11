@@ -8,14 +8,14 @@ Develop applications with Python.
 // .devcontainer.json or .devcontainer/devcontainer.json
 
 {
-    "image": "ghcr.io/willsawyerrrr/devcontainer-python-${PYTHON_VERSION}"
+    "image": "ghcr.io/willsawyerrrr/devcontainer-node-${NODE_VERSION}"
 }
 ```
 
 ```dockerfile
 # Dockerfile
 
-FROM ghcr.io/willsawyerrrr/devcontainer-python-${PYTHON_VERSION}
+FROM ghcr.io/willsawyerrrr/devcontainer-node-${NODE_VERSION}
 ```
 
 ```yaml
@@ -23,5 +23,5 @@ FROM ghcr.io/willsawyerrrr/devcontainer-python-${PYTHON_VERSION}
 
 services:
     my-service:
-        image: ghcr.io/willsawyerrrr/devcontainer-python-${PYTHON_VERSION}
+        image: ghcr.io/willsawyerrrr/devcontainer-node-${NODE_VERSION}
 ```
