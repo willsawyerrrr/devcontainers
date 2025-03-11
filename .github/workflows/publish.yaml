@@ -90,6 +90,7 @@ jobs:
           docker push --all-tags ghcr.io/willsawyerrrr/${{ env.IMAGE_NAME }}
 
   prebuild-web-images:
+    needs: prebuild-base-images
     strategy:
       matrix:
         nodeVersion: [20, 18, 16, 14]
